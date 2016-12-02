@@ -51,6 +51,7 @@ namespace ConsoleApplication
             var x = 0;
             var y = 0;
             var cardinalDirection = CardinalDirection.North;
+            historicCoordinates.Add(new Tuple<int, int>(x,y));
             foreach (var inElem in input) {     
                 var direction = inElem.Item1;   
                 var nrOfSteps = inElem.Item2;           
@@ -111,7 +112,7 @@ namespace ConsoleApplication
         }  
 
         private void AddHistoricCoordinates(CardinalDirection directionOfWalk, int nrOfSteps, int xStart, int yStart) {
-            for (var i = 0; i < nrOfSteps; i++) {
+            for (var i = 1; i <= nrOfSteps; i++) {
                 switch (directionOfWalk) {
                     case CardinalDirection.North: 
                         HasHistoricMatch(xStart,yStart+i);
