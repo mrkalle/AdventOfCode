@@ -73,7 +73,7 @@ UURUDRRDDLRRRLULLDDDRRLDUDLRRULUUDULLDUDURRDLDRRRDLRDUUUDRDRRLLDULRLUDUUULRULULR
         }  
 
         private void FindKeys() {
-            CurrentKey = Key7;
+            CurrentKey = Key5;
             foreach (var line in input) {
                 foreach (var element in line) {
                     switch (element) {
@@ -115,8 +115,8 @@ UURUDRRDDLRRRLULLDDDRRLDUDLRRULUUDULLDUDURRDLDRRRDLRDUUUDRDRRLLDULRLUDUUULRULULR
             Key3.DownNeighbour = Key7;
             Key3.LeftNeighbour = Key2;
 
-            Key4.DownNeighbour = Key3;
-            Key4.LeftNeighbour = Key8;
+            Key4.DownNeighbour = Key8;
+            Key4.LeftNeighbour = Key3;
 
             Key5.RightNeighbour = Key6;
 
