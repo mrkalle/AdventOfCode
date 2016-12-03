@@ -47,6 +47,7 @@ namespace ConsoleApplication
                 input.Add(new Tuple<Direction, int>(direction, nrOfSteps));
             }
         }   
+
         private int GetDistance() {
             var x = 0;
             var y = 0;
@@ -94,8 +95,7 @@ namespace ConsoleApplication
                         break;
                     case CardinalDirection.West:
                         if (direction == Direction.Left) {
-                            cardinalDirection = CardinalDirection.South;
-                            AddHistoricCoordinates(CardinalDirection.North, nrOfSteps, x, y);
+                            AddHistoricCoordinates(CardinalDirection.South, nrOfSteps, x, y);
                             y -= nrOfSteps;
                             cardinalDirection = CardinalDirection.South;
                         } else {            
@@ -143,7 +143,7 @@ namespace ConsoleApplication
                     }
 
                     return true;
-                }                 
+                }         
             }
 
             return false;
